@@ -23,7 +23,7 @@ SET @@SESSION.SQL_LOG_BIN= 0;
 -- GTID state at the beginning of the backup 
 --
 
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '03cb7b5c-6fc2-11f1-bf4d-6c1ff7172ac6:1-9';
+SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '03cb7b5c-6fc2-11f1-bf4d-6c1ff7172ac6:1-31';
 
 --
 -- Table structure for table `student`
@@ -39,7 +39,7 @@ CREATE TABLE `student` (
   `contact` varchar(10) NOT NULL,
   `image` varchar(1000) NOT NULL,
   PRIMARY KEY (`studentId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
-INSERT INTO `student` VALUES (1,'John Edward','2007-05-08','98765432','https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZSUyMHBob3RvJTIwbWFsZXxlbnwwfHwwfHx8MA%3D%3D'),(2,'Mary Thomson','2006-02-06','9876578','https://images.unsplash.com/photo-1544717305-2782549b5136?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D'),(3,'Benny Teo','2006-08-18','98789879','https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBob3RvJTIwbWFsZXxlbnwwfHwwfHx8MA%3D%3D');
+INSERT INTO `student` VALUES (1,'John Edward','2026-07-16','98765431','aaron.avif'),(2,'Mary Thomson','2006-02-06','9876578','mary.avif'),(3,'Benny Teo','2006-08-16','98789879','benny.avif');
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
@@ -62,4 +62,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-02 10:06:00
+-- Dump completed on 2026-07-09 11:05:12

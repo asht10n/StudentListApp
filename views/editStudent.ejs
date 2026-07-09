@@ -48,7 +48,7 @@
 
             <div class="card-body">
 
-              <form action="/editStudent/<%= student.studentId %>" method="POST">
+              <form action="/editStudent/<%= student.studentId %>" method="POST" enctype="multipart/form-data">
 
                 <div class="mb-3">
                   <label for="name" class="form-label">
@@ -81,44 +81,46 @@
                     Current Image
                   </label>
 
-                  <div class="text-center">
-                    <img src="<%= student.image %>" alt="<%= student.name %>" class="img-fluid rounded border"
-                      style="max-height: 200px;">
-                  </div>
-                </div>
-
-                <div class="d-grid gap-2">
-
-                  <button type="submit" class="btn btn-warning">
-                    Update Student
-                  </button>
-
-                  <a href="/" class="btn btn-secondary">
-                    Cancel
-                  </a>
+                  <input type="text" class="form-control" name="currentImage" value="<%=student.image %>"" readonly><br>
+                    <img src="/images/<%= student.image %>" width="50%"><br><br>
+                    New Image:<br><input class="form-control" type="file" id="image" name="image" accept="image/*"
+                    ><br><br>
 
                 </div>
+            </div>
 
-              </form>
+            <div class="d-grid gap-2">
+
+              <button type="submit" class="btn btn-warning">
+                Update Student
+              </button>
+
+              <a href="/" class="btn btn-secondary">
+                Cancel
+              </a>
 
             </div>
+
+            </form>
 
           </div>
 
-          <% } else { %>
-
-            <div class="alert alert-warning text-center">
-              <h5>No student found.</h5>
-              <a href="/" class="btn btn-secondary mt-3">
-                Back to Home
-              </a>
-            </div>
-
-            <% } %>
-
       </div>
 
+      <% } else { %>
+
+        <div class="alert alert-warning text-center">
+          <h5>No student found.</h5>
+          <a href="/" class="btn btn-secondary mt-3">
+            Back to Home
+          </a>
+        </div>
+
+        <% } %>
+
     </div>
+
+  </div>
 
   </div>
 
